@@ -14,8 +14,8 @@ search_terms_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(search_terms_module)
 
 # Get the search terms based on available attributes
-if hasattr(search_terms_module, 'get_advanced_categories'):
-    categories = search_terms_module.get_advanced_categories()
+if hasattr(search_terms_module, 'get_search_categories'):
+    categories = search_terms_module.get_search_categories()
     print(f"Successfully imported search terms using get_advanced_categories()")
 elif hasattr(search_terms_module, 'SEARCH_TERMS'):
     categories = search_terms_module.SEARCH_TERMS
@@ -357,4 +357,5 @@ if __name__ == "__main__":
     
     print(f"\nDownload complete! Downloaded a total of {total_pdfs} PDFs.")
     print(f"Check the 'Google PDF Downloader' folder in the project directory.")
+
 
