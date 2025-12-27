@@ -64,8 +64,7 @@ SEARCH_ENGINES = [
         'url': 'https://html.duckduckgo.com/html/?q={}',
         'selector': 'a.result__a',
         'link_extractor': lambda link: link.get('href')
-    },
-    {
+    }
 
 def get_random_headers():
     """Generate random headers for requests to avoid detection."""
@@ -357,6 +356,7 @@ if __name__ == "__main__":
     
     print(f"\nDownload complete! Downloaded a total of {total_pdfs} PDFs.")
     print(f"Check the 'Google PDF Downloader' folder in the project directory.")
+
 
 
 
