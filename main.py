@@ -64,6 +64,60 @@ SEARCH_ENGINES = [
         'url': 'https://html.duckduckgo.com/html/?q={}',
         'selector': 'a.result__a',
         'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Yahoo',
+        'url': 'https://search.yahoo.com/search?p={}&n=30',
+        'selector': 'h3.title a',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Brave',
+        'url': 'https://search.brave.com/search?q={}&count=30',
+        'selector': 'a.result-header',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Searx',
+        'url': 'https://searx.be/search?q={}&pageno=1',
+        'selector': 'h4.result_header a',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Qwant',
+        'url': 'https://www.qwant.com/?q={}&t=web',
+        'selector': 'a[data-testid="serp-item-link"]',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Startpage',
+        'url': 'https://www.startpage.com/do/search?query={}',
+        'selector': 'a.result-link',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Ecosia',
+        'url': 'https://www.ecosia.org/search?q={}',
+        'selector': 'a.result__link',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Yandex',
+        'url': 'https://yandex.com/search/?text={}',
+        'selector': 'a.organic__url',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Baidu',
+        'url': 'https://www.baidu.com/s?wd={}',
+        'selector': 'h3.t a',
+        'link_extractor': lambda link: link.get('href')
+    },
+    {
+        'name': 'Swisscows',
+        'url': 'https://swisscows.com/web?query={}',
+        'selector': 'a.item-title',
+        'link_extractor': lambda link: link.get('href')
     }
 ]
 
@@ -357,5 +411,6 @@ if __name__ == "__main__":
     
     print(f"\nDownload complete! Downloaded a total of {total_pdfs} PDFs.")
     print(f"Check the 'Google PDF Downloader' folder in the project directory.")
+
 
 
